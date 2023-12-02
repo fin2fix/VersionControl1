@@ -1,0 +1,73 @@
+~/Desktop/Study/_GIT/VersionControl/DZ1
+$ git init
+Initialized empty Git repository in C:/Users/fin2f/Desktop/Study/_GIT/VersionControl/DZ1/.git/
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (master)
+$ git add .
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (master)
+$ git commit -am "DZ1"
+[master (root-commit) c3c736d] DZ1
+ 1 file changed, 120 insertions(+)
+ create mode 100644 Task1.java
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (master)
+$ git remote add origin https://github.com/fin2fix/VersionControl1.git
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (master)
+$ git remote -v
+origin  https://github.com/fin2fix/VersionControl1.git (fetch)
+origin  https://github.com/fin2fix/VersionControl1.git (push)
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (master)
+$ git branch -M main
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (main)
+$ git push -u origin main
+To https://github.com/fin2fix/VersionControl1.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/fin2fix/VersionControl1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (main)
+$ git log origin/main ^main
+commit 8fb9a15068d2c9a492b8dfcd8ed1c513b1308724 (origin/main)
+Author: Michael K <121197927+fin2fix@users.noreply.github.com>
+Date:   Sat Dec 2 17:11:43 2023 +0000
+
+    Update README.md
+
+commit bf15333823265c61c7d06976949451aea59eab58
+Author: Michael K <121197927+fin2fix@users.noreply.github.com>
+Date:   Sat Dec 2 17:11:17 2023 +0000
+
+    Initial commit
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (main)
+$ git pull origin main --allow-unrelated-histories
+From https://github.com/fin2fix/VersionControl1
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.92 KiB | 1.92 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/fin2fix/VersionControl1.git
+   8fb9a15..db60efe  main -> main
+branch 'main' set up to track 'origin/main'.
+
+~/Desktop/Study/_GIT/VersionControl/DZ1 (main)
+$
